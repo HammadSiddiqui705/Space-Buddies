@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+
+/* ***********************************************************************************************************
+                                              HERO SECTION
+**************************************************************************************************************/
+
+.Hero {
+  padding-top: 85px;
+}
+
+.text {
+  width: 99%;
+  font-size: 55px;
+  line-height: 60px;
+}
+
+.highlight {
+  background: linear-gradient(96deg, #9b4dff, #00ff6a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+
+.btn-start {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 15px;
+  padding: 8px 20px;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #00d92f, #ffe03a);
+  color: #000;
+  font-weight: 400;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.btn-play {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 15px;
+  padding: 8px 20px;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #00d92f, #ffe03a);
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.btn-play:hover,
+.btn-start:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+}
+
+.hero-section img {
+  border-radius: 25px;
+  max-width: 97%;
+}
+
+
+
+/* ***********************************************************************************************************
+                                              Fact Box
+**************************************************************************************************************/
+
+.fact-box {
+  width: 60%;
+  text-align: center;
+  margin: auto;
+  border-radius: 20px;
+  padding: 24px 24px;
+  color: #ffffff;
+  background-color: rgba(74, 60, 59, 0.8);
+  border: 1px solid #7B6939;
+  margin-top: 85px;
+}
+
+.fact-box h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.fact-box h4 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #dedada;
+}
+
+
+/* ***********************************************************************************************************
+                                             Navigation Cards
+**************************************************************************************************************/
+
+section.explore {
+  padding: 5rem 120px;
+}
+
+.explore-card {
+  background: rgba(24, 27, 51, 0.7);
+  border-radius: 12px;
+  padding: 0.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.explore-card:hover {
+  transform: scale(1.04);
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+
+
+.CC {
+  border: 0.5px solid #26D926;
+  transition: all 0.3s ease;
+}
+
+.CC:hover {
+  border: 2.5px solid #26d926;
+}
+
+.SS {
+  border: 0.5px solid #ffde59;
+  transition: all 0.3s ease;
+}
+
+.SS:hover {
+  border: 2.5px solid #ffde59;
+}
+
+
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+/* ***********************************************************************************************************
+                                              Adventure Crads
+**************************************************************************************************************/
+
+
+.adventure-card {
+  background: linear-gradient(to right,
+      rgba(105, 48, 179, 0.5),
+      rgba(64, 86, 122, 0.5));
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  color: #fff;
+  max-width: 800px;
+}
+
+.floating-img {
+  width: 100px;
+  border-radius: 5px;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.adventure-card h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.adventure-card p {
+  font-size: 18px;
+  color: #a3b8c2;
+  margin: 10px;
+}
+
+.blast {
+  text-decoration: none;
+  background-color: #00ff6a;
+  color: #000;
+  font-weight: bold;
+  border-radius: 50px;
+  padding: 0.75rem 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.btn-blast:hover {
+  transform: scale(1.05);
+}
+
+
+/* ***********************************************************************************************************
+                                              Plants Setion
+**************************************************************************************************************/
+
+.Planets {
+  background: linear-gradient(to right, rgba(105, 48, 179, 0.5), rgba(64, 86, 122, 0.5));
+  border-radius: 20px;
+  padding: 1.5rem 2rem;
+  color: white;
+}
+
+/* Swiper */
+.planetSwiper {
+  width: 100%;
+  max-width: 660px;
+  margin: auto;
+}
+
+.planetSwiper .swiper-slide {
+  width: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  transform: scale(0.7);
+  opacity: 0.5;
+}
+
+.planetSwiper .swiper-slide img {
+  width: 100%;
+  height: auto;
+}
+
+.planetSwiper .swiper-slide-active {
+  opacity: 1 !important;
+  transform: scale(2.2);
+}
+
+.planetSwiper .swiper-slide-next,
+.planetSwiper .swiper-slide-prev {
+  opacity: 0.3;
+  transform: scale(0.9);
+}
+
+/* Navigation */
+.Nav-btn {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.Nav-btn button {
+  background: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.Nav-btn button:hover {
+  background: #ddd;
+}
+
+/* Right side panel */
+.info-panel {
+  background: linear-gradient(135deg, #3e1976cc, #3d196a);
+  border-radius: 12px;
+  padding: 10px 20px;
+  box-shadow: 0 8px 22px rgb(0 0 0 / 0.38);
+}
+
+.info-header h2 {
+  color: #e3dfe7;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.tag-terrestrial {
+  border: 1.6px solid #4a94e7;
+  color: #4a94e7;
+  border-radius: 16px;
+  padding: 3px 14px;
+  font-size: 0.875rem;
+  user-select: none;
+  font-weight: 600;
+}
+
+/* Stats */
+.stat-card {
+  border-radius: 10px;
+  padding: 10px 15px;
+  color: #ddd;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: inset 0 0 14px rgb(255 255 255 / 0.07);
+}
+
+.stat-title {
+  margin-bottom: 6px;
+  font-size: 0.85rem;
+}
+
+.stat-value {
+  font-weight: 400;
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+/* Individual colors */
+.stat-distance {
+  background: linear-gradient(135deg, #4e59ab, #5b54a8);
+}
+.stat-diameter {
+  background: linear-gradient(135deg, #6e4baa, #7a3aa6);
+}
+.stat-moons {
+  background: linear-gradient(135deg, #445161, #325153);
+}
+.stat-temp {
+  background: linear-gradient(135deg, #8a3a55, #6e294a);
+}
+.stat-atmosphere {
+  background: linear-gradient(135deg, #9e7646, #7e5e44);
+  grid-column: 1 / -1;
+}
+
+/* Facts */
+.facts strong {
+  color: #dcd6fc;
+}
+.facts ul li {
+  color: #acc6f9;
+}
+
+/* ✅ Responsive */
+
+@media (max-width: 576px) {
+  .info-header h2 {
+    font-size: 1.5rem;
+  }
+  .Nav-btn button {
+    padding: 4px 10px;
+    font-size: 0.9rem;
+  }
+  .stat-card {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+  .planetSwiper .swiper-slide {
+    width: 100px;
+  }
+  .planetSwiper .swiper-slide-active {
+    transform: scale(1.5);
+  }
+}
+
+
+@media (max-width: 991px) {
+
+  .Banner {
+    padding-top: 50px;
+  }
+
+
+  .text {
+    margin: auto;
+    word-spacing: 3px;
+    font-size: 50px;
+  }
+
+  /* Fact */
+  .fact-box {
+    width: 100%;
+  }
+
+  /* cards */
+  section.explore {
+    padding: 5rem 0px;
+  }
+
+  .info-panel {
+    margin-top: 20px;
+  }
+  .planetSwiper .swiper-slide-active {
+    transform: scale(1.8);
+  }
+}

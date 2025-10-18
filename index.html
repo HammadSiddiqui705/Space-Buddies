@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kids Space</title>
+  <!-- Custoum CSS -->
+  <link rel="stylesheet" href="/CSS/index.css">
+  <link rel="stylesheet" href="/CSS/navbar.css">
+  <!-- Bootstarp and other links-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+  <!-- Background -->
+  <div class="star-field"></div>
+  <!-- Navigation Bar -->
+  <div id="navbar-placeholder"></div>
+  <!-- ========================================================================================================
+                                          HERO SECTION
+  ========================================================================================================= -->
+  <section class="container-fluid Hero">
+    <div class="row align-items-center">
+      <!-- Left Content -->
+      <div class="text-area col-lg-6 text-center text-lg-start">
+        <h1 class="text fw-bold" style="color: white;">Explore the <span class="highlight">Wonders</span> of Space! 🚀
+        </h1>
+        <p class="mt-4 fs-5 fw-semi-bold" style="color: #A3B8C2;">
+          Join us on an amazing journey through the universe! Learn about planets, stars, rockets, and become a real
+          space explorer!
+        </p>
+        <div class="mt-4 d-flex flex-column flex-md-row gap-3">
+          <a href="topics.html" class="btn-start"><i class="bi bi-book"></i> Start Learning!</a>
+          <a href="activity.html" class="btn-play"><i class="bi bi-controller"></i> Play Games!</a>
+        </div>
+      </div>
+      <!-- Right Image -->
+      <div class="col-lg-6 text-center mt-4 mt-lg-0 hero-section">
+        <img src="/src/images/space-hero-n_Ce7KYs.jpg" alt="Space Kids">
+      </div>
+    </div>
+  </section>
+  <!-- ========================================================================================================
+                                          Fact Box
+  ========================================================================================================= -->
+  <section class="container">
+    <div class="fact-box">
+      <h3 class="mb-4">Space Fact of the Day!</h3>
+      <h4 class="mt-4">☀️ The Sun is 109 times wider than Earth!</h4>
+    </div>
+  </section>
+  <!-- ========================================================================================================
+                                          Action Section
+  ========================================================================================================= -->
+  <section class="explore">
+    <div class="container">
+      <h2 class="text-center mb-5 text-white">What Would You Like to Explore? 🚀</h2>
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-md-4">
+          <a href="topics.html" class="text-decoration-none text-white">
+            <div class="explore-card CC">
+              <div class="icon" style="color: #8e44ff;"><i class="bi bi-book"></i></div>
+              <h5 class="fw-bold">Learn About Space</h5>
+              <p>Discover amazing facts about planets, stars, and the universe!</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-4">
+          <a href="activity.html" class="text-decoration-none text-white">
+            <div class="explore-card SS">
+              <div class="icon" style="color: #ffde59;"><i class="bi bi-unity"></i></div>
+              <h5 class="fw-bold">Play Space Games</h5>
+              <p>Have fun with exciting space games and activities!</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-4">
+          <a href="about.html" class="text-decoration-none text-white">
+            <div class="explore-card CC">
+              <div class="icon" style="color: #47B4EB;"><i class="bi bi-people-fill"></i></div>
+              <h5 class="fw-bold">Meet Our Team</h5>
+              <p>Learn about our mission and meet Captain Cosmos!</p>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- ========================================================================================================
+                                           Section
+  ========================================================================================================= -->
+  <section class="py-5 px-2">
+  <div class="container Planets text-center">
+    <h2 class="mb-4">Explore the Planets 🚀</h2>
+    <!-- <p class="mb-3">
+      Discover amazing facts about our solar system in a fun and colorful way!
+    </p> -->
+
+    <div class="row align-items-center">
+      <!-- Left Side (Carousel) -->
+      <div class="col-lg-6 col-md-12 text-center">
+        <div class="swiper planetSwiper">
+          <!-- Slider -->
+          <div class="swiper-wrapper" id="planetSlides"></div>
+
+          <!-- Navigation -->
+          <div class="Nav-btn mt-3 mt-md-5">
+            <button class="prevBtn btn btn-light" id="prevBtn">←</button>
+            <span id="planetCount">1 of 5</span>
+            <button class="nextBtn btn btn-light" id="nextBtn">→</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side (Info) -->
+      <div class="col-lg-6 col-md-10 text-start mx-auto">
+        <div class="info-panel">
+          <div class="info-header d-flex justify-content-between align-items-center mb-4">
+            <h2 id="planetName">Mercury</h2>
+            <span class="tag-terrestrial">Terrestrial</span>
+          </div>
+
+          <!-- Stats -->
+          <div class="row g-3 mb-4">
+            <div class="col-6">
+              <div class="stat-card stat-distance">
+                <div class="stat-title">Sun Distance</div>
+                <div class="stat-value" id="planetDistance">58 million km</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="stat-card stat-diameter">
+                <div class="stat-title">Diameter</div>
+                <div class="stat-value" id="planetDiameter">4,879 km</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="stat-card stat-moons">
+                <div class="stat-title">Moons</div>
+                <div class="stat-value" id="planetMoons">0</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="stat-card stat-temp">
+                <div class="stat-title">Temperature</div>
+                <div class="stat-value" id="planetTemperature">-173°C to 427°C</div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="stat-card stat-atmosphere">
+                <div class="stat-title">Atmosphere</div>
+                <div class="stat-value" id="planetAtmosphere">Virtually none</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Facts -->
+          <div class="facts">
+            <strong>Fascinating Facts</strong>
+            <ul id="planetFacts">
+              <li>Closest planet to the Sun</li>
+              <li>Has extreme temperature variations</li>
+              <li>No atmosphere to retain heat</li>
+              <li>Covered in craters like our Moon</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+  <!-- ========================================================================================================
+                                          Action Section
+  ========================================================================================================= -->
+  <section class="adventure-section py-5">
+    <div class="container">
+      <div class="adventure-card shadow-lg mx-auto">
+        <img src="/src/images/kk.jpg" alt="Earth" class="floating-img mb-3">
+        <h2 class="fw-bold">Ready for Your Space Adventure? 🌍</h2>
+        <p class="mb-4">
+          There's a whole universe waiting to be explored! Start your journey today
+          and become the space explorer you've always dreamed of being!
+        </p>
+        <a href="topics.html" class="blast">
+          🚀 Blast Off Now!
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <!-- ===================================== SCRIPTING AREA ================================================ -->
+  <script src="js/navbar.js"></script>
+  <script src="JS/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

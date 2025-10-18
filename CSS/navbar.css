@@ -1,0 +1,140 @@
+/* Background */
+:root {
+  --space-blue: hsl(220, 50%, 8%);
+  --deep-purple: hsl(268, 49%, 21%);
+  --purple: #a259ff;
+}
+
+/* Gradient + Stars */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: linear-gradient(135deg, var(--space-blue), var(--deep-purple));
+  overflow-x: hidden;
+}
+
+.star-field {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  /* stay behind content */
+  pointer-events: none;
+  background-image:
+    radial-gradient(1.9px 1.9px at 10% 20%, white, transparent),
+    radial-gradient(1.9px 1.9px at 25% 80%, gold, transparent),
+    radial-gradient(1.9px 1.9px at 35% 30%, white, transparent),
+    radial-gradient(1.9px 1.9px at 40% 90%, gold, transparent),
+    radial-gradient(1.9px 1.9px at 50% 50%, white, transparent),
+    radial-gradient(1.9px 1.9px at 60% 40%, gold, transparent),
+    radial-gradient(1.9px 1.9px at 70% 75%, white, transparent),
+    radial-gradient(1.9px 1.9px at 80% 20%, gold, transparent),
+    radial-gradient(1.9px 1.9px at 85% 90%, white, transparent),
+    radial-gradient(1.9px 1.9px at 95% 60%, gold, transparent);
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: twinkle 5s infinite;
+}
+
+/* Twinkling animation */
+@keyframes twinkle {
+
+  0%,
+  100% {
+    opacity: 0.9;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+}
+
+
+
+.navbar {
+  background-color: rgba(19, 26, 44, 0.95);
+  border-bottom: 1.1px solid #555557;
+}
+
+/* Brand styling */
+.navbar-brand img {
+  width: 28%;
+}
+
+/* Nav links */
+.navbar-nav .nav-link {
+  display: flex;
+  gap: 5px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.bi {
+  margin-right: 3px;
+}
+
+.navbar-nav .nav-link:hover {
+  transform: translateY(-4px);
+  color: #a259ff;
+  background-color: #242E42;
+  box-shadow: 1px 1px 70px #8C3CDD;
+}
+
+.nav-item {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.nav-link.active {
+  background-color: #8C3CDD;
+  color: white;
+  border-radius: 50px;
+}
+
+.nav-link.active:hover {
+  background-color: #8C3CDD;
+  box-shadow: 0px 0px 0px #8C3CDD;
+}
+
+
+
+@media (max-width: 991px) {
+  .side-bar {
+    background-color: rgba(249, 247, 247, 0.074);
+    backdrop-filter: blur(7px);
+  }
+
+  .navbar-brand img {
+    width: 45%;
+  }
+
+  .offcanvas-body .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .navbar-nav .nav-link:hover {
+    transform: translateY(0px);
+    color: #a259ff;
+    background-color: #242E42;
+    box-shadow: 0px 0px 0px #8C3CDD;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 5px 0;
+  }
+
+  .navbar-nav .nav-link {
+    width: 100%;
+    font-size: 18px;
+    justify-content: center;
+  }
+}

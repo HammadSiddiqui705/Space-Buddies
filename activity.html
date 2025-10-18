@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kids Space</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/CSS/activity.css">
+  <link rel="stylesheet" href="/CSS/navbar.css">
+  <link rel="stylesheet" href="/CSS/games.css">
+
+  <!--Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+  <div class="star-field"></div>
+  <div id="navbar-placeholder"></div>
+
+  <!-- HERO SECTION -->
+  <header class="text-center pt-5">
+    <h1 class="display-4 fw-semibold" style="color: #FAFAFA;">Space Games & Activities! 🎮</h1>
+    <p class="fs-5 mx-auto">Have fun while learning about space with our exciting games and activities!</p>
+  </header>
+
+  <main class="container py-5">
+
+    <!-- ONLINE GAMES -->
+    <section class="online-games mb-5">
+      <h2 class="text-center text-white fw-bold mb-4">Play Online Games</h2>
+      <div class="row">
+
+        <div class="col-md-4 mb-4">
+          <div class="game-card text-center">
+            <div class="icon"><i class="bi bi-globe-central-south-asia" style="color: #25CD26;"></i></div>
+            <h4 class="fw-bold">Guess the planet</h4>
+            <p style="color: #A3B8C2; font-size: 0.938rem;">Match the planets and learn their names!</p>
+            <p style="color: #A3B8C2; font-size: 0.992rem;">Difficulty: Easy<span class="ms-5"><i
+                  class="bi bi-star-fill" style="color: #F5D63D;"></i><i class="bi bi-star"></i><i
+                  class="bi bi-star"></i></span></p>
+            <button class="btn-play-now text-center" type="button" class="btn btn-primary" data-bs-toggle="modal"
+              data-bs-target="#guessImageModal"><i class="bi bi-play-fill" style="color: black;"></i>Play Now!</button>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="game-card text-center">
+            <div class="icon"><i class="bi bi-sun-fill" style="color: #F5D63D;"></i></div>
+            <h4 class="fw-bold">Bulid Solar System</h4>
+            <p style="color: #A3B8C2; font-size: 0.938rem;">Drag and drop planets in the correct order!</p>
+            <p style="color: #A3B8C2; font-size: 0.992rem;">Difficulty: Medium<span class="ms-5"><i
+                  class="bi bi-star-fill" style="color: #F5D63D;"></i><i class="bi bi-star-fill"
+                  style="color: #F5D63D;"></i><i class="bi bi-star"></i></span></p>
+            <button class="btn-play-now text-center" type="button" data-bs-toggle="modal"
+              data-bs-target="#comingSoonModal"><i class="bi bi-play-fill" style="color: black;"></i>
+                Play Now!</button>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="game-card text-center">
+            <div class="icon"><i class="bi bi-globe-central-south-asia" style="color: #F5D63D;"></i></div>
+            <h4 class="fw-bold">Guess the planet</h4>
+            <p style="color: #A3B8C2; font-size: 0.938rem;">Match the planets and learn their names!</p>
+            <p style="color: #A3B8C2; font-size: 0.992rem;">Difficulty: Easy<span class="ms-5"><i
+                  class="bi bi-star-fill" style="color: #F5D63D;"></i><i class="bi bi-star-fill"
+                  style="color: #F5D63D;"></i><i class="bi bi-star"></i></span></p>
+            <button class="btn-play-now text-center" type="button" data-bs-toggle="modal"
+              data-bs-target="#comingSoonModal"><i class="bi bi-play-fill" style="color: black;"></i>
+                Play Now!</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Space Quiz Zone -->
+    <section class="online-games mb-5">
+      <h2 class="text-center text-white fw-bold mb-2">Space Quiz Zone</h2>
+      <p class="text-center" style="color: #9EB3BD;">Choose your favorite space topic and start the quiz!</p>
+
+      <div class="row">
+
+        <div class="col-md-4 mb-4">
+          <div class="quiz-card text-center">
+            <div class="icon"><i class="bi bi-globe" style="color: #3c35bb;"></i></div>
+            <h4 class="fw-bold">Planet Quiz</h4>
+            <p style="color: #A3B8C2; font-size: 0.938rem;">Can you name all the planets?</p>
+            <p style="color: #A3B8C2; font-size: 0.938rem;">5 Questions</p>
+            <button class="quiz-btn text-center" type="button" class="btn btn-primary" data-bs-toggle="modal"
+              data-bs-target="#quiz1"><i class="bi bi-play-fill" style="color: white;"></i>Take
+                quiz</button>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="quiz-card text-center">
+            <div class="icon"><i class="bi bi-stars" style="color: #0DCAF0;"></i></div>
+            <h4 class="fw-bold">Galaxy Facts</h4>
+            <p style="color: #A3B8C2; font-size: 0.938rem;">Do you know our galaxy name?</p>
+            <p style="color: #A3B8C2; font-size: 0.938rem;">5 Questions</p>
+            <button class="quiz-btn text-center" type="button" class="btn btn-primary" data-bs-toggle="modal"
+              data-bs-target="#quiz1"><i class="bi bi-play-fill" style="color: white;"></i>Take
+                quiz</button>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="quiz-card text-center">
+            <div class="icon"><i class="bi bi-rocket" style="color: #BAE3F7;"></i></div>
+            <h4 class="fw-bold">Moon Mission</h4>
+            <p style="color: #A3B8C2; font-size: 0.938rem;">Who was first on the Moon?</p>
+            <p style="color: #A3B8C2; font-size: 0.938rem;">5 Questions</p>
+            <button class="quiz-btn text-center" type="button" class="btn btn-primary" data-bs-toggle="modal"
+              data-bs-target="#quiz1"><i class="bi bi-play-fill" style="color: white;"></i>Take
+                quiz</button>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- PRINTABLE ACTIVITIES -->
+    <section class="printable-activities mb-5">
+      <h2 class="text-center text-white mb-4">Origami & Printable Activities</h2>
+      <div class="container">
+        <div class="row justify-content-center activity-card-container">
+
+          <div class="col-md-6 mb-4">
+            <div class="activity-card text-center">
+              <div class="icon">🎨</div>  
+              <h5>Planet Coloring Pages</h5>
+              <p>Print and color beautiful space scenes!</p>
+              <a href="/images.pdf" class="btn-download-print" target="main"><i class="bi bi-download" style="color: black;"></i> Download &
+                Print</a>
+            </div>
+          </div>
+
+          <!-- <div class="col-md-6 mb-4">
+            <div class="activity-card text-center">
+              <div class="icon">🪢</div>
+              <h5>Astronaut Maze Adventure</h5>
+              <p>Help the astronaut find their way to the rocket!</p>
+              <a href="/find the path.pdf" class="btn-download-print" target="main"><i class="bi bi-download" style="color: black;"></i> Download &
+                Print</a>
+            </div>
+          </div> -->
+
+          <div class="col-md-6 mb-4">
+            <div class="activity-card text-center">
+              <div class="icon">📃</div>
+              <h5>Fold Your Own Space Magic</h5>
+              <p>Make fun space origami creations!</p>
+              <a href="/Action/crafts.html" target="main" class="btn-download-print"><i class="bi bi-download" style="color: black;"></i> Create you crafts</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- COMING SOON -->
+    <section class="coming-soon text-center py-2">
+      <div class="more-games-card">
+        <div class="icon"><i class="bi bi-controller" style="color:#8C3CDD; font-size: 3.5rem;"></i></div>
+        <h3>More Games Coming Soon! 🚀</h3>
+        <p>We're working on even more exciting space games and activities! Check back soon for space exploration
+          adventures, asteroid dodging games, and interactive space station builders!</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================================================
+                                             Modal sections
+    ========================================================================================================= -->
+  
+  <!-- ================================ Guess the image==================================================== -->
+  <div class="modal fade" id="guessImageModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="guessImageLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Guess the Planet</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <!-- ===================== Game area ======================== -->
+          <div id="gameArea">
+            <!-- Score and time -->
+            <div class="score-time d-flex justify-content-center gap-5 mb-3 mb-md-4">
+              <div>⭐ <span class="mobile-score">Score:</span> <span id="score" class="score">0</span></div>
+              <div>⏱️ <span class="mobile-score">Time Left:</span> <span id="timer" class="timer">60</span>s</div>
+              <div>📘 <span class="mobile-score">Question:</span> <span id="progress" class="progress-text">1/4</span>
+              </div>
+            </div>
+            <!-- Quizzes -->
+            <div class="row align-items-center">
+              <div class="col-lg-6">
+                <div class="game-image mx-auto py-4">
+                  <img id="gameImage" src="" alt="" style="width: 100%; border-radius: 15px;">
+                </div>
+              </div>
+              <div class="col-lg-6 mt-4 mt-md-0">
+                <div class="me-0 me-md-5" id="optionsArea"></div>
+              </div>
+              <div id="result" class="result-text mt-3"></div>
+            </div>
+          </div>
+          <!-- ===================== Game over screen  ================= -->
+          <div id="gameOverScreen">
+            <h2 class="text-warning">🎉 Great Job, Space Explorer! 🎉</h2>
+            <p class="fs-5 mt-3">Your final score is: <span id="finalScore" class="text-info fw-bold"></span></p>
+            <div class="mt-4">
+              <button class="btn btn-success me-2" onclick="playAgain()">🔁 Play Again</button>
+              <button class="btn btn-danger" data-bs-dismiss="modal" onclick="resetGame()">❌ Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- ================================ Coming Soon =================================================== -->
+  
+  <div class="modal fade" id="comingSoonModal" tabindex="-1" aria-labelledby="comingSoonLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center"
+        style="border-radius: 20px; background: linear-gradient(135deg, #1b2735, #090a0f); color: #fff;">
+        <div class="modal-body p-4">
+          <h2 class="fw-bold mb-3">🚀 Coming Soon!</h2>
+          <p class="fs-5 mb-4">Get ready, young space explorer! 🪐<br>
+            A new adventure is launching soon. Stay tuned for updates!</p>
+          <div class="mb-3 icon">
+            <i class="bi bi-globe2"></i>
+          </div>
+          <button type="button" class="btn btn-light px-4 fw-semibold" data-bs-dismiss="modal">
+            Got it! 🌟
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================ Quiz 1 =================================================== -->
+
+  <div class="modal fade" id="quiz1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="quiz1Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5">Space Quiz Challenge 🌌</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+          onclick="quiz1ResetGame()"></button>
+      </div>
+
+      <div class="modal-body text-center">
+        <!-- ===================== Game Area ======================== -->
+        <div id="quiz1-gameArea">
+          <div class="score-time d-flex justify-content-center gap-5 mb-3 mb-md-4">
+            <div>⭐ <span class="mobile-score">Score:</span><span id="quiz1-score">0</span></div>
+            <div>⏱️ <span class="mobile-score">Time Left:</span><span id="quiz1-timer">60</span>s</div>
+            <div>📘 <span class="mobile-score">Question:</span><span id="quiz1-progress">1/4</span></div>
+          </div>
+
+          <h4 id="quiz1-questionText" class="fw-bold text-info"></h4>
+          <div id="quiz1-optionsArea"></div>
+          <div id="quiz1-result" class="mt-3 fw-bold"></div>
+        </div>
+
+        <!-- ===================== Game Over ======================== -->
+        <div id="quiz1-gameOverScreen" style="display:none;">
+          <h2 class="text-warning">🎉 Great Job, Space Explorer! 🎉</h2>
+          <p class="fs-5 mt-3">Your final score is:
+            <span id="quiz1-finalScore" class="text-info fw-bold"></span></p>
+          <div class="mt-4">
+            <button class="btn btn-success me-2" onclick="quiz1PlayAgain()">🔁 Play Again</button>
+            <button class="btn btn-danger" data-bs-dismiss="modal" onclick="quiz1ResetGame()">❌ Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Scripts -->
+  <script src="js/navbar.js"></script>
+  <script src="js/Game1.js"></script>
+  <script src="js/Quiz1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

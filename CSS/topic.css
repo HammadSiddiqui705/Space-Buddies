@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    color: #fafafa;
+}
+
+header p {
+    color: #A3B8C2;
+    width: 50%;
+}
+
+
+.cards{
+    background-color: #171B31;
+    border: 2px solid #1A542C;
+    padding: 20px;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cards:hover {
+    transform: scale(1.04);
+    border: 2.5px solid #26D926;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.topic-card a{
+    text-decoration: none;
+}
+
+
+
+.more-games-card {
+    width: 95%;
+    margin: auto;
+    background-color: rgba(105, 48, 179, 0.3);
+    border: 1px solid #6600cc;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.icon {
+    font-size: 3rem;
+    font-weight: bolder;
+    margin-bottom: 0.5rem;
+    animation: floatUpDown 3s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1210px;
+    }
+}
+
+@media (max-width: 771px) {
+
+    header p {
+        width: 90%;
+    }
+
+}

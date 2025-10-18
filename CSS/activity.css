@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    color: #fafafa;
+}
+
+
+header p{
+    color: #A3B8C2;
+    width: 50%;
+}
+
+/* GAME & ACTIVITY CARDS */
+.game-card,
+.activity-card {
+    background-color: #1E242C;
+    border: 2px solid #565330;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.activity-card-container {
+    padding: 0px 115px;
+}
+
+.game-card:hover,
+.activity-card:hover {
+    transform: scale(1.04);
+    border: 2.5px solid #D3BA3A;
+}
+
+
+.icon {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    animation: floatUpDown 3s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+.btn-nav {
+    background-color: #7535BB;
+    padding: 0.46rem;
+    border-radius: 10px;
+    border: none;
+}
+
+.quiz-card {
+    background-color: #181A32;
+    border: 2px solid #1A542B;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.quiz-card:hover {
+    transform: scale(1.04);
+    border: 2.5px solid #26D926;
+}
+
+
+.quiz-btn {
+    width: 95%;
+    background-color: #8C3CDD;
+    border: black;
+    color: white;
+    text-align: center;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.quiz-btn:hover {
+    background-color: #7535BB;
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+/* BUTTONS */
+.btn-play-now {
+    width: 95%;
+    background-color: #26D926;
+    border: black;
+    color: black;
+    text-align: center;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-play-now:hover {
+    background-color: #26B528;
+    transform: scale(1.05);
+}
+
+.btn-download-print {
+    background-color: #ffcc00;
+    border: none;
+    color: #333;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-download-print:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);
+}
+
+
+/* COMING SOON CARD */
+.more-games-card {
+    width: 60%;
+    margin: auto;
+    background-color: rgba(105, 48, 179, 0.3);
+    border: 1px solid #6600cc;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.more-games-card h3 {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.more-games-card p {
+    color: #A3B8C2;
+    font-weight: 600;
+    margin-top: 25px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.6rem;
+    }
+}
+
+
+@media (min-width: 1200px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1210px;
+    }
+}
+
+@media (max-width: 501px) {
+    .activity-card-container {
+        padding: 0px;
+    }
+
+    .more-games-card {
+        width: 100%;
+    }
+
+    header p{
+        width: 90%;
+    }
+
+    .mobile-score{
+        display: none;
+    }
+}

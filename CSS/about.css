@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  color: #ffffff;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.hero img {
+  width: 120px;
+  margin-bottom: 20px;
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+
+
+
+.card-box {
+  background: rgba(24, 26, 50, 0.7);
+  border: 2px solid #1B532D;
+  border-radius: 15px;
+  padding: 20px;
+  height: 100%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.card-box h5 {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.card-box:hover {
+  transform: scale(1.04);
+  border: 2px solid #26D926;
+}
+
+.captain-box {
+  background: rgba(26, 23, 52, 0.8);
+  border: 1px solid #2D3953;
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.captain-box img {
+  width: 120px;
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+
+.facts {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.fact-card {
+  background: rgba(101, 49, 169, 0.6);
+  border-radius: 15px;
+  padding: 25px 15px;
+  margin: 15px 0;
+  cursor: pointer;
+}
+

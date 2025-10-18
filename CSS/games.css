@@ -1,0 +1,42 @@
+.modal-content {
+    background: linear-gradient(180deg, #181836, #0c0c24);
+    border: 1.5px solid #7535BB;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(128, 0, 255, 0.4);
+}
+
+.game-image {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.option-btn {
+    background-color: #8C3CDD;
+    width: 100%;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.option-btn:hover {
+    background-color: #7535BB;
+    transform: scale(1.04);
+}
+
+.option-btn1 {
+    background-color: #8C3CDD;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.option-btn1:hover {
+    background-color: #7535BB;
+    transform: scale(1.04);
+}

@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    color: #fafafa;
+}
+
+.backbtn{
+    color: rgb(0, 0, 0);
+    background-color: #0ebde8;
+    padding: 10px 15px;
+    border: 2px solid #1a013a;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 200;
+    border-radius: 40px;
+    margin: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.backbtn:hover{
+    background-color: #307694;
+    transform: scale(1.1);
+}
+
+
+.peragraph{
+    background-color: #1F1F3B;
+    padding: 1rem;
+    border-radius: 15px;
+    width: 70%;
+}
+
+.peragraph p{
+    font-size: 1.2rem;
+    line-height: 28px;
+}
+
+
+.icon {
+    font-size: 5rem;
+    font-weight: bolder;
+    margin-bottom: 0.5rem;
+    animation: floatUpDown 3s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+.ff1-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* spacing between items */
+    flex-wrap: wrap; /* allows wrapping on smaller screens */
+    margin-top: 20px;
+}
+.ff2-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* spacing between items */
+    flex-wrap: wrap; /* allows wrapping on smaller screens */
+    margin-top: 20px;
+}
+
+.ff1, .ff2 {
+    background-color: #091b28;    /* dark panel */
+    color: white;
+    font-size: 1.2rem;
+    padding: 12px 18px;
+    margin: 10px auto;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    flex: 1 1 calc(50% - 30px); /* 2 per row on big screens */
+    min-width: 250px; /* Prevent too small boxes */
+}
+.ff1 {
+    width: 45%;
+    height: 80px;
+}
+
+/* ff2 → bigger size */
+.ff2 {
+    width: 45%;
+    height: 100px;
+    font-size: 1.3rem; /* slightly larger text */
+}
+/* Icon style */
+.ff1 i, .ff2 i {
+    color: #fffb00; /* bright cyan star color */
+    font-size: 1.5rem;
+    backdrop-filter: blur(8px); /* frosted glass */
+    -webkit-backdrop-filter: blur(8px); /* Safari support */
+}
+/* Hover Glow */
+.ff1:hover {
+    box-shadow: 0 0 20px rgba(14, 189, 232, 0.8);
+    transform: scale(1.05);
+}
+
+.ff2:hover {
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.8);
+    transform: scale(1.08);
+}
+/* 📱 Mobile screens */
+@media (max-width: 600px) {
+    .ff1, .ff2 {
+        flex: 1 1 100%; /* Full width on small screens */
+    }
+}

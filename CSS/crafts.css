@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  color: white;
+}
+
+.back-button{
+    background-color: #47B4EB;
+    padding: 10px 15px;
+    border-radius: 55px;
+    border: none;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover{
+    transform: scale(1.05);
+    background-color: #3C94C4;
+}
+
+.carfts-container{
+    background-color:rgba(103, 129, 151, 0.8);
+    border: 1.4px solid #2D3953;
+    border-radius: 10px;
+}
+
+.Heading{
+    text-align: center;
+    font-weight: bold;
+    width: 50%;
+    font-size: 2.3rem;
+}
+
+.cards{
+    background-color: rgba(126, 196, 98, 0.9);
+    border-radius: 12px;
+    border: 3.2px solid #08AACD;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+}
+
+.cards:hover{
+    transform: scale(1.04);
+    background-color: #7EC462;
+    border: 3.3px solid #07c6f1;
+}
+
+#carfts-container a{
+    text-decoration: none;
+}
+
+.cards-image {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.cards-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cards h5{
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 991px){
+    .Heading{
+        width: 100%;
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1210px;
+    }
+}

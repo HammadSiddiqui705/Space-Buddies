@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  color: #ffffff;
+}
+
+.Main-h{
+    font-size: 46px;
+}
+
+.Main-p{
+    color: #9EB2BD;
+    font-size: 20px;
+    width: 60%;
+}
+
+.contact-section {
+    padding: 3rem 1rem;
+}
+
+.contact-card {
+    background: #171731;
+    border: 1px solid #2D3953;
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.contact-card input{
+    background-color: #1D2238;
+    border: 2px solid #2D3953;
+    border-radius: 12px;
+}
+
+.contact-card input::placeholder{
+    color: #8EA1AD;
+}
+
+.contact-card input:focus{
+    border: 2px solid #8C3CDD;
+    background-color: #1D2238;
+    box-shadow: none;
+}
+
+.contact-card textarea{
+    background-color: #1D2238;
+    border: 2px solid #2D3953;
+    border-radius: 12px;
+}
+
+.contact-card textarea::placeholder{
+    color: #8EA1AD;
+}
+
+.contact-card textarea:focus{
+    border: 2px solid #8C3CDD;
+    background-color: #1D2238;
+    box-shadow: none;
+}
+
+.info-box {
+    background: #161A30;
+    border: 2px solid #1B532D;
+    border-radius: 12px;
+    padding: 1.3rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.info-box:hover{
+    transform: scale(1.02);
+    border: 3px solid #26D926;  
+}
+
+
+.sbox{
+    border: 2px solid #605C31;
+    box-shadow: inset -8px 0 98px -8px  rgba(96, 92, 49, 0.5);
+}
+.sbox:hover{
+    border: 3px solid #F5D63D; 
+}
+
+
+.safe-communication{
+    background: rgba(63, 30, 105, 0.6);
+    border: 0.5px solid #8C3CDD;
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.info-box h5 {
+    margin-bottom: .75rem;
+}
+
+.icon{
+    animation: floatUpDown 2.5s ease-in-out infinite;
+    font-size: 45px;
+}
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.contact-card .btn-launch{
+    background-color: #26D926;
+    color: black;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: all ;
+    padding: 8px;
+    border: none;
+    margin-top: 7px;
+    transition: transform 0.2s ease;
+}
+
+.btn-launch i{
+    color: black;
+}
+
+.btn-launch:hover   {
+    background-color: #25B22A;
+    transform: scale(1.05);  
+}
+
+.btn-launch:hover {
+    background-color: #00cc4c;
+}
+
+.fact-box {
+    background: rgba(93, 62, 85, 0.7);
+    border: 1px solid #9F8E38;
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+@media (min-width: 1200px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1210px;
+    }
+}
+
+@media (max-width: 991px) {
+    .Main-h {
+        font-size: 36px;
+    }
+
+    .Main-p {
+        color: #9EB2BD;
+        font-size: 18px;
+        width: 100%;
+    }
+}
