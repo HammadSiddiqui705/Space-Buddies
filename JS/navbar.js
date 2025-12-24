@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("/Components/navbar.html")
+  fetch("/Componenets/navbar.js")
     .then((res) => res.text())
     .then((data) => {
       document.getElementById("navbar-placeholder").innerHTML = data;
