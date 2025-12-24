@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   fetch("/Componenets/navbar.js")
     .then((res) => res.text())
     .then((data) => {
-      document.getElementById("navbar-placeholder").innerHTML = data;
+      document.getElementById('navbar-placeholder').innerHTML = data;
 
       const currentPage = window.location.pathname.split("/").pop() || "index.html";
       const navLinks = document.querySelectorAll(".nav-link");
