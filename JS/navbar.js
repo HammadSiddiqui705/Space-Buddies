@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("Components/navbar.html")
+  fetch("/Components/navbar.html")
     .then((res) => res.text())
     .then((data) => {
-      document.getElementById('navbar-placeholder').innerHTML = data;
+      document.getElementById("navbar-placeholder").innerHTML = data;
 
       const currentPage = window.location.pathname.split("/").pop() || "index.html";
       const navLinks = document.querySelectorAll(".nav-link");
