@@ -21,7 +21,7 @@ fetch("Data/Planets.json")
     });
 
     // Swiper initialize
-    swiper = new Swiper(".planetSwiper", {
+    swiper = new swiper(".planetSwiper", {
       slidesPerView: 3,
       centeredSlides: true,
       loop: true,
