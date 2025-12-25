@@ -1,12 +1,12 @@
 // 🪐 Quiz Data
 const quizzes = [
   {
-    image: "/src/images/Earth.png",
+    image: "../src/images/Earth.png",
     answer: "Earth",
     options: ["Mars", "Earth", "Venus", "Jupiter"]
   },
   {
-    image: "/src/images/Milky way.jpg",
+    image: "../src/images/Milky way.jpg",
     answer: "Milky Way Galaxy",
     options: ["Jupiter", "Sombrero Galaxy", "Saturn", "Milky Way Galaxy"]
   },
