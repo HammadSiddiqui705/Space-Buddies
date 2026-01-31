@@ -1,6 +1,4 @@
-// 
-
-
+// Planets data array
 let planets = [
   {
     "name": "Mercury",
@@ -127,42 +125,63 @@ let planets = [
 let currentIndex = 0;
 let swiper;
 
-// JSON load karna - REMOVED FETCH, DIRECTLY USE ARRAY
-
-// Slides generate
-const slidesContainer = document.getElementById("planetSlides");
-slidesContainer.innerHTML = "";
-planets.forEach((planet, i) => {
-  const slide = document.createElement("div");
-  slide.className = "swiper-slide text-center";
-  slide.innerHTML = `
-    <img src="${planet.image}" alt="${planet.name}" style="width:140px; object-fit:contain;">
-  `;
-  slidesContainer.appendChild(slide);
+// DOM load hone ka wait karein
+document.addEventListener('DOMContentLoaded', function() {
+  initializeSwiper();
+  setupEventListeners();
 });
 
-// Swiper initialize
-swiper = new Swiper(".planetSwiper", {
-  slidesPerView: 3,
-  centeredSlides: true,
-  loop: true,
-  watchSlidesProgress: true,
+function initializeSwiper() {
+  // Slides generate
+  const slidesContainer = document.getElementById("planetSlides");
+  if (!slidesContainer) {
+    console.error("planetSlides element not found!");
+    return;
+  }
+  
+  slidesContainer.innerHTML = "";
+  planets.forEach((planet, i) => {
+    const slide = document.createElement("div");
+    slide.className = "swiper-slide text-center";
+    slide.innerHTML = `
+      <img src="${planet.image}" alt="${planet.name}" style="width:140px; object-fit:contain;">
+    `;
+    slidesContainer.appendChild(slide);
+  });
 
-  breakpoints: {
-    0: { // mobile
-      slidesPerView: 1,
-    },
-    768: { // tablet
-      slidesPerView: 1,
-    },
-    992: { // laptop and up
-      slidesPerView: 3,
-    },
-  },
-});
+  // Swiper initialize
+  swiper = new Swiper(".planetSwiper", {
+    slidesPerView: 3,
+    centeredSlides: true,
+    loop: true,
+    speed: 500,
+    watchSlidesProgress: true,
 
-// Show first planet details
-showPlanet(currentIndex);
+    breakpoints: {
+      0: { // mobile
+        slidesPerView: 1,
+      },
+      768: { // tablet
+        slidesPerView: 1,
+      },
+      992: { // laptop and up
+        slidesPerView: 3,
+      },
+    },
+    
+    // Swiper ke events
+    on: {
+      init: function() {
+        console.log("Swiper initialized successfully!");
+        showPlanet(currentIndex);
+      },
+      slideChange: function() {
+        currentIndex = this.realIndex;
+        showPlanet(currentIndex);
+      }
+    }
+  });
+}
 
 function showPlanet(index) {
   const planet = planets[index];
@@ -188,14 +207,16 @@ function showPlanet(index) {
 }
 
 // Buttons click events
-document.getElementById("nextBtn").addEventListener("click", () => {
-  swiper.slideNext(); // Swiper ke sath sync
-  currentIndex = (currentIndex + 1) % planets.length;
-  showPlanet(currentIndex);
-});
+function setupEventListeners() {
+  document.getElementById("nextBtn").addEventListener("click", () => {
+    swiper.slideNext(); // Swiper ke sath sync
+    currentIndex = (currentIndex + 1) % planets.length;
+    showPlanet(currentIndex);
+  });
 
-document.getElementById("prevBtn").addEventListener("click", () => {
-  swiper.slidePrev(); // Swiper ke sath sync
-  currentIndex = (currentIndex - 1 + planets.length) % planets.length;
-  showPlanet(currentIndex);
-});
+  document.getElementById("prevBtn").addEventListener("click", () => {
+    swiper.slidePrev(); // Swiper ke sath sync
+    currentIndex = (currentIndex - 1 + planets.length) % planets.length;
+    showPlanet(currentIndex);
+  });
+}
