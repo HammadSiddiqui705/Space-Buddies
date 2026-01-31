@@ -3,7 +3,7 @@ let currentIndex = 0;
 let swiper;
 
 // JSON load karna
-fetch("Data/Planets.Json")
+fetch("./Planets.json")
   .then(response => response.json())
   .then(data => {
     planets = data;
