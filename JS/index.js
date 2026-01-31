@@ -2,7 +2,7 @@
 let planets = [
   {
     "name": "Mercury",
-    "image": "src/images/mercury.png",
+    "image": "https://space-facts.com/wp-content/uploads/mars-v2.jpg",
     "distanceFromSun": "58 million km",
     "diameter": "4,879 km",
     "moons": 0,
