@@ -16,7 +16,7 @@
   },
   {
     "name": "Venus",
-    "image": "/src/images/Venus.png",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrDs4tRovOFqUqqbHJly7rkrf9gAii2S-FEEqWbpVAdoo_f_Ap3gnEap6B2yKAxQEdt0-LLj2wAASft6_6NrjS2PE&s&ec=121525334",
     "distanceFromSun": "108 million km",
     "diameter": "12,104 km",
     "moons": 0,
@@ -31,7 +31,7 @@
   },
   {
     "name": "Earth",
-    "image": "/src/images/Earth.png",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrDs4tRovOFqUqqbHJly7rkrf9gAii2S-FEEqWbpVAdoo_f_Ap3gnEap6B2yKAxQEdt0-LLj2wAASft6_6NrjS2PE&s&ec=121525334",
     "distanceFromSun": "150 million km",
     "diameter": "12,742 km",
     "moons": 1,
@@ -46,7 +46,7 @@
   },
   {
     "name": "Mars",
-    "image": "/src/images/mars.png",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrDs4tRovOFqUqqbHJly7rkrf9gAii2S-FEEqWbpVAdoo_f_Ap3gnEap6B2yKAxQEdt0-LLj2wAASft6_6NrjS2PE&s&ec=121525334",
     "distanceFromSun": "228 million km",
     "diameter": "6,779 km",
     "moons": 2,
