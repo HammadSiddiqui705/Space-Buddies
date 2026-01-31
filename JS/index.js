@@ -125,17 +125,25 @@ let planets = [
 let currentIndex = 0;
 let swiper;
 
-// DOM load hone ka wait karein
-document.addEventListener('DOMContentLoaded', function() {
+// Wait for page to load and Swiper to be available
+window.onload = function() {
+  console.log("Page loaded, checking Swiper...");
+  
+  // Check if Swiper is available
+  if (typeof Swiper === 'undefined') {
+    console.error("❌ Swiper is not defined! Check CDN links.");
+    return;
+  }
+  
+  console.log("✅ Swiper is available, initializing...");
   initializeSwiper();
-  setupEventListeners();
-});
+};
 
 function initializeSwiper() {
   // Slides generate
   const slidesContainer = document.getElementById("planetSlides");
   if (!slidesContainer) {
-    console.error("planetSlides element not found!");
+    console.error("❌ planetSlides element not found!");
     return;
   }
   
@@ -143,13 +151,21 @@ function initializeSwiper() {
   planets.forEach((planet, i) => {
     const slide = document.createElement("div");
     slide.className = "swiper-slide text-center";
+    
+    // Image path - GitHub Pages ke liye adjust
+    let imagePath = planet.image;
+    // Agar GitHub Pages par hain to path adjust karein
+    if (window.location.hostname.includes('github.io')) {
+      imagePath = imagePath.replace('src/', '');
+    }
+    
     slide.innerHTML = `
-      <img src="${planet.image}" alt="${planet.name}" style="width:140px; object-fit:contain;">
+      <img src="${imagePath}" alt="${planet.name}" style="width:140px; height:140px; object-fit:contain;">
     `;
     slidesContainer.appendChild(slide);
   });
 
-  // Swiper initialize
+  // Swiper initialize - CORRECT SYNTAX
   swiper = new Swiper(".planetSwiper", {
     slidesPerView: 3,
     centeredSlides: true,
@@ -169,10 +185,9 @@ function initializeSwiper() {
       },
     },
     
-    // Swiper ke events
     on: {
       init: function() {
-        console.log("Swiper initialized successfully!");
+        console.log("✅ Swiper initialized successfully!");
         showPlanet(currentIndex);
       },
       slideChange: function() {
@@ -180,6 +195,19 @@ function initializeSwiper() {
         showPlanet(currentIndex);
       }
     }
+  });
+
+  // Buttons click events
+  document.getElementById("nextBtn").addEventListener("click", () => {
+    swiper.slideNext();
+    currentIndex = (currentIndex + 1) % planets.length;
+    showPlanet(currentIndex);
+  });
+
+  document.getElementById("prevBtn").addEventListener("click", () => {
+    swiper.slidePrev();
+    currentIndex = (currentIndex - 1 + planets.length) % planets.length;
+    showPlanet(currentIndex);
   });
 }
 
@@ -204,19 +232,4 @@ function showPlanet(index) {
   });
 
   document.getElementById("planetCount").textContent = `${index + 1} of ${planets.length}`;
-}
-
-// Buttons click events
-function setupEventListeners() {
-  document.getElementById("nextBtn").addEventListener("click", () => {
-    swiper.slideNext(); // Swiper ke sath sync
-    currentIndex = (currentIndex + 1) % planets.length;
-    showPlanet(currentIndex);
-  });
-
-  document.getElementById("prevBtn").addEventListener("click", () => {
-    swiper.slidePrev(); // Swiper ke sath sync
-    currentIndex = (currentIndex - 1 + planets.length) % planets.length;
-    showPlanet(currentIndex);
-  });
 }
